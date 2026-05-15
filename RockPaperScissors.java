@@ -16,10 +16,17 @@ public class RockPaperScissors {
         System.out.println("2. Paper");
         System.out.println("3. Scissors");
 
+        if (!sc.hasNextInt()) {
+            System.out.println("Invalid choice!");
+            sc.close();
+            return;
+        }
+
         int userChoice = sc.nextInt();
 
         if (userChoice < 1 || userChoice > 3) {
             System.out.println("Invalid choice!");
+            sc.close();
             return;
         }
 
